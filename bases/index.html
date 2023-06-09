@@ -4,18 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
-    />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
@@ -26,8 +14,13 @@
   <body style="background-color: bisque">
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-8 text-white shadow-lg p-5 mt-5 rounded" style="background-color: sienna;">
-                incluir el  texto
+            <div    class="col-8 shadow-lg p-5 mt-5 rounded" 
+                    style="background-color:beige;"
+                    x-data="{ cont : 0 }">
+                    <button class="btn btn-primary"
+                            x-on:click = cont++>Incrementar</button>
+                    <span x-text="cont"></span>
+                
             </div>
         </div>
     </div>
