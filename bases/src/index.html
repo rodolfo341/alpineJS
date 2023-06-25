@@ -16,7 +16,7 @@
         <div x-data = "data()" 
               class = "col-span-3"
         >          
-            <button x-on:click="open = !open"
+            <button x-on:click="isOpen()"
                     class="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] 
                     from-purple-900 to-indigo-500
                     py-3 px-5 mt-11
@@ -44,7 +44,10 @@
     <script>
       function data(){
         return {
-          open: false
+          open: false,
+          isOpen(){
+            this.open = !this.open
+          }
         }
       }
     </script>
